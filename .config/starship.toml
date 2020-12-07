@@ -1,0 +1,98 @@
+add_newline = false
+
+format = """
+$battery\
+$username\
+$hostname\
+$shlvl\
+$kubernetes\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$hg_branch\
+$docker_context\
+$package\
+$cmake\
+$dart\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$golang\
+$helm\
+$java\
+$julia\
+$nim\
+$nodejs\
+$ocaml\
+$perl\
+$php\
+$purescript\
+$python\
+$ruby\
+$rust\
+$swift\
+$terraform\
+$zig\
+$nix_shell\
+$conda\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$env_var\
+$crystal\
+$custom\
+$cmd_duration\
+$line_break\
+$lua\
+$jobs\
+$time\
+$status\
+$character"""
+
+[character]
+success_symbol = "[➜](bold green) "
+error_symbol = "[✗](bold red) "
+use_symbol_for_status = true
+
+[cmd_duration]
+min_time = 500
+format = "took [$duration](bold yellow) "
+
+[directory]
+read_only = " "
+truncation_length = 5
+truncate_to_repo = true
+format = "[$path]($style)[$lock_symbol]($lock_style) "
+style = "bold cyan"
+disabled = false
+truncation_symbol = "…/"
+
+[line_break]
+disabled = true
+
+[battery]
+full_symbol = " "
+charging_symbol = " "
+discharging_symbol = " "
+
+[[battery.display]]
+threshold = 10
+style = "bold red"
+
+[[battery.display]]
+threshold = 60
+style = "bold yellow"
+
+[[battery.display]]
+threshold = 100
+style = "bold green"
+
+[docker_context]
+format = "via [🐋 $context ](blue bold)"
+
+[java]
+format = "via [☕$version ](red bold)"
