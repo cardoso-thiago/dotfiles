@@ -44,6 +44,12 @@ alias lca='colorls -1a'
 alias lcf='colorls -la'
 alias lcg='colorls -la --gs'
 
+colorscript random
+
+if [ -f ~/bash.command-not-found ]; then
+    . ~/bash.command-not-found
+fi
+
 eval "$(starship init zsh)"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
