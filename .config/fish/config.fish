@@ -7,6 +7,7 @@ set SPACEFISH_PROMPT_ADD_NEWLINE false
 set SPACEFISH_PROMPT_SEPARATE_LINE false
 set SPACEFISH_USER_SHOW always
 set SPACEFISH_EXEC_TIME_ELAPSED 1
+set SPACEFISH_CHAR_SYMBOL ❯
 
 ### Aliases ###
 alias copydir="pwd | xsel -b"
