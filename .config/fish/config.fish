@@ -10,13 +10,15 @@ set SPACEFISH_EXEC_TIME_ELAPSED 1
 set SPACEFISH_CHAR_SYMBOL ❯
 
 ### Aliases ###
+thefuck --alias | source
 alias copydir="pwd | xsel -b"
-alias clear='clear; echo; echo; seq 1 (tput cols) | sort -R | spark | lolcat; echo; echo'
 alias ofd="xdg-open ."
 alias lc='colorls -1'
 alias lca='colorls -1a'
 alias lcf='colorls -la'
 alias lcg='colorls -la --gs'
+alias l='lc'
+alias cls='clear; echo; echo; seq 1 (tput cols) | sort -R | spark | lolcat; echo; echo'
 
 ### Kubectl ###
 alias kgp='kubectl get pods'
@@ -41,11 +43,9 @@ alias kgaa='kubectl get all --all-namespaces'
 alias kl='kubectl logs'
 
 ### Functions ###
-# Add a search in google function
-function google
-    xdg-open "https://www.google.com/search?q=$argv" 2>/dev/null
+function __fish_default_command_not_found_handler
+    fish_insulter $argv
 end
-funcsave google
 
 # Execute a random color script
 colorscript random
