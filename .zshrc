@@ -1,6 +1,6 @@
 export ZSH="/home/cardoso/.oh-my-zsh"
 
-plugins=(git fzf-docker docker-compose chucknorris alias-finder bgnotify common-aliases copydir copyfile sudo extract httpie ubuntu web-search z kubectl)
+plugins=(git docker docker-compose chucknorris alias-finder bgnotify common-aliases copydir copyfile sudo extract httpie web-search z kubectl)
 source $ZSH/oh-my-zsh.sh
 
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
