@@ -1,18 +1,14 @@
-#Remove greeting
+### Remove fish greeting ###
 set fish_greeting
 
-#Spacefish configs
+### Spacefish configs ###
 set SPACEFISH_PROMPT_ORDER battery time user dir host git package node docker ruby golang php rust haskell julia aws conda pyenv kubecontext exec_time line_sep jobs exit_code char
 set SPACEFISH_PROMPT_ADD_NEWLINE false
 set SPACEFISH_PROMPT_SEPARATE_LINE false
 set SPACEFISH_USER_SHOW always
-set SPACEFISH_DOCKER_SYMBOL " "
 set SPACEFISH_EXEC_TIME_ELAPSED 1
 
-#Configs
-set ABBR_TIPS_PROMPT "\n \e[1m{{ .abbr }}\e[0m => {{ .cmd }}"
-
-#Aliases
+### Aliases ###
 alias copydir="pwd | xsel -b"
 alias clear='clear; echo; echo; seq 1 (tput cols) | sort -R | spark | lolcat; echo; echo'
 alias ofd="xdg-open ."
@@ -21,13 +17,7 @@ alias lca='colorls -1a'
 alias lcf='colorls -la'
 alias lcg='colorls -la --gs'
 
-#Functions
-function google
-    xdg-open "https://www.google.com/search?q=$argv"
-end
-funcsave google
-
-#Kubectl
+### Kubectl ###
 alias kgp='kubectl get pods'
 alias kgpa='kubectl get pods --all-namespaces'
 alias kdp='kubectl describe pods'
@@ -49,10 +39,17 @@ alias kga='kubectl get all'
 alias kgaa='kubectl get all --all-namespaces'
 alias kl='kubectl logs'
 
-#Execute a random color script
+### Functions ###
+# Add a search in google function
+function google
+    xdg-open "https://www.google.com/search?q=$argv" 2>/dev/null
+end
+funcsave google
+
+# Execute a random color script
 colorscript random
 
-#Exports
+### Exports ###
 set FZF_DEFAULT_COMMAND "fd . $HOME"
 set FZF_FIND_FILE_COMMAND "$FZF_DEFAULT_COMMAND"
 set FZF_CD_COMMAND "fd -t d . $HOME"
