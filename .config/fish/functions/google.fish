@@ -1,4 +1,4 @@
 # Defined in /home/cardoso/.config/fish/config.fish @ line 47
-function google --argument search
-    open "https://www.google.com/search?q=$search"
+function goo
+    xdg-open "https://www.google.com/search?q=$argv"
 end
