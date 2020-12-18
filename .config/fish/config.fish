@@ -2,7 +2,7 @@
 set fish_greeting
 
 ### Spacefish configs ###
-set SPACEFISH_PROMPT_ORDER battery time user dir host git package node docker ruby golang php rust haskell julia aws conda pyenv kubecontext exec_time line_sep jobs exit_code char
+set SPACEFISH_PROMPT_ORDER battery time user dir host git package node docker ruby golang rust kubecontext exec_time line_sep jobs exit_code char
 set SPACEFISH_PROMPT_ADD_NEWLINE false
 set SPACEFISH_PROMPT_SEPARATE_LINE false
 set SPACEFISH_USER_SHOW always
@@ -54,6 +54,7 @@ colorscript random
 set FZF_DEFAULT_COMMAND "fd . $HOME"
 set FZF_FIND_FILE_COMMAND "$FZF_DEFAULT_COMMAND"
 set FZF_CD_COMMAND "fd -t d . $HOME"
+set FZF_DEFAULT_OPTS '--cycle --layout=reverse --preview-window=wrap'
 
 set PATH /home/$USER/.gem/ruby/2.7.0/bin:$PATH
 set PATH /home/$USER/.local/bin:$PATH

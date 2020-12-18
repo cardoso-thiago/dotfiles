@@ -1,5 +1,4 @@
 jorgebucaran/fisher
-jethrokuan/fzf
 jhillyerd/plugin-git
 reitzig/sdkman-for-fish
 jorgebucaran/spark.fish
@@ -9,3 +8,4 @@ gazorby/fish-abbreviation-tips
 eth-p/fish-plugin-sudo
 tuvistavie/fish-kubectl
 oh-my-fish/plugin-extract
+jethrokuan/fzf
