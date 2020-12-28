@@ -1,0 +1,79 @@
+# Adicionar --tray para criar a aplicação com ícone no tray
+
+Pegar o pacote gerado e jogar para uma pasta comum
+
+Exemplo:
+    sudo mkdir /opt/nativefier
+    sudo cp -r TickTick-linux-x64 /opt/nativefier/
+
+Criar um arquivo de .desktop em ~/.local/share/applications/
+
+Categorias
+    https://specifications.freedesktop.org/menu-spec/latest/apa.html
+StartupWMClass
+    resources/app/package.json
+
+
+Criar app do TickTick
+
+nativefier "https://ticktick.com" \
+      --icon ticktick-nativefier.png \
+      --name "TickTick" \
+      --internal-urls ".*?accounts\.google\.com.*?|.*(ticktick)\.(com).*" \
+      --single-instance
+
+[Desktop Entry]
+Name=TickTick
+Comment=TickTick Web
+GenericName=TickTick
+Exec=/opt/nativefier/TickTick-linux-x64/TickTick
+Icon=/opt/nativefier/TickTick-linux-x64/resources/app/icon.png
+Type=Application
+StartupNotify=true
+StartupWMClass=ticktick-nativefier-7be916
+Categories=Office;
+Keywords=ticktick;
+
+Criar app do WhatsApp
+
+nativefier "https://web.whatsapp.com" \
+      --icon whats.png \
+      --name "WhatsApp" \
+      --single-instance
+
+[Desktop Entry]
+Name=WhatsApp
+Comment=WhatsApp Web
+GenericName=WhatsApp
+Exec=/opt/nativefier/WhatsApp-linux-x64/WhatsApp
+Icon=/opt/nativefier/WhatsApp-linux-x64/resources/app/icon.png
+Type=Application
+StartupNotify=true
+StartupWMClass=whatsapp-nativefier-d40211
+Categories=Network;
+Keywords=whatsapp;
+
+
+Criar app do Gmail
+
+nativefier "https://mail.google.com/mail/u/0/#inbox" \
+      --icon Gmail_2020.png \
+      --user-agent "Mozilla/5.0 (X11; Linux x86_64; rv:83.0) Gecko/20100101 Firefox/83.0" \
+      --name "Gmail" \
+      --internal-urls "(.*?mail\.google\.com.*?|.*?accounts\.google\.com.*?)" \
+      --single-instance 
+
+[Desktop Entry]
+Name=Gmail
+Comment=Gmail
+GenericName=Gmail
+Exec=/opt/nativefier/Gmail-linux-x64/Gmail
+Icon=/opt/nativefier/Gmail-linux-x64/resources/app/icon.png
+Type=Application
+StartupNotify=true
+StartupWMClass=gmail-nativefier-2122c5
+Categories=Google;Productivity;Mail;Email; 
+Keywords=gmail;
+
+
+      

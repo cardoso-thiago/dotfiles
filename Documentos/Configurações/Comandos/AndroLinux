@@ -1,0 +1,18 @@
+Listar todos os ativos
+    vncserver -list
+
+Parar (pode passar o numero da lista anterior, opcionalmente)
+    vncserver-stop
+
+Iniciar remoto
+    vncserver-start -localhost no
+
+
+Conectar com vinagre:
+    Pegar IP do aparelho
+        adb shell ip -f inet addr show wlan0
+        
+        Conectar: 192.168.15.4:5901
+
+    Via USB
+        IP do ifconfig:5901

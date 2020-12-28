@@ -1,0 +1,13 @@
+Caminho: /usr/share/sddm/scripts/Xsetup
+
+
+#!/bin/sh
+# Xsetup - run as root before the login dialog appears
+intern=eDP1
+extern=HDMI1
+
+if xrandr | grep "$extern disconnected"; then
+    xrandr --output "$extern" --off --output "$intern" --mode 1366x768 --primary
+else
+    xrandr --output "$intern" --off --output "$extern" --mode 1920x1080 --primary
+fi

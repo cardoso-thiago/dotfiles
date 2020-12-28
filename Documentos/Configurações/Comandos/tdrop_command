@@ -1,0 +1,1 @@
+tdrop -ma -w -150 -x 75 -y "$PANEL_HEIGHT" alacritty

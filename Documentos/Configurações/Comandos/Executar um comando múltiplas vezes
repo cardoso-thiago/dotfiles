@@ -1,0 +1,2 @@
+xargs -I % -P 8 curl --location --request GET 'http://grupo2.spec4.mastertech.com.br/itaujuntos/dev/projetos/v1/projeto/2' \
+< <(printf '%s\n' {1..100}) 
