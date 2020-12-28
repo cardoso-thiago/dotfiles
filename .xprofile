@@ -1,2 +1,4 @@
 #Start dunst
 dunst &
+#Start xbindkeys
+xbindkeys &

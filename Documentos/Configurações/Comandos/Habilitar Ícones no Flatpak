@@ -1,4 +1,0 @@
-\cp /usr/share/icons ~/.icons -r 
-flatpak --user override org.telegram.desktop --filesystem=/home/$USER/.icons/:ro
-flatpak --user override com.getpostman.Postman --filesystem=/home/$USER/.icons/:ro
-flatpak --user override com.bitwarden.desktop --filesystem=/home/$USER/.icons/:ro
