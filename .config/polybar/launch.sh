@@ -21,7 +21,7 @@ launch_bar() {
 		height=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f2)
 		right=$((width - 30))
 		bottom=$((height - 25))
-		stalonetray --geometry 1x1+$right+$bottom --window-layer top --window-type dock --sticky true &
+		stalonetray --geometry 1x1+$right+$bottom &
 		snixembed &
 	elif [[ "$style" == "pwidgets" ]]; then
 		bash "$dir"/pwidgets/launch.sh --main
