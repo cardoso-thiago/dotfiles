@@ -6,6 +6,8 @@ themes=(`ls --hide="launch.sh" $dir`)
 launch_bar() {
 	# Terminate already running bar instances
 	killall -q polybar
+	killall stalonetray
+	killall snixembed
 
 	# Wait until the processes have been shut down
 	while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
@@ -14,6 +16,11 @@ launch_bar() {
 	if [[ "$style" == "hack" || "$style" == "cuts" ]]; then
 		polybar -q top -c "$dir/$style/config.ini" &
 		polybar -q bottom -c "$dir/$style/config.ini" &
+		sleep 1
+		width=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f1)
+		center=$((width / 2 - 40))
+		stalonetray --geometry 1x1+$center+0 --window-layer top --window-type dock --sticky true &
+		snixembed &
 	elif [[ "$style" == "pwidgets" ]]; then
 		bash "$dir"/pwidgets/launch.sh --main
 	else
