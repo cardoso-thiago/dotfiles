@@ -8,7 +8,6 @@ launch_bar() {
 	killall -q polybar
 	killall stalonetray
 	killall snixembed
-
 	# Wait until the processes have been shut down
 	while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
@@ -20,13 +19,13 @@ launch_bar() {
 		width=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f1)
 		height=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f2)
 		right=$((width - 30))
-		bottom=$((height - 25))
+		bottom=$((height - 23))
 		stalonetray --geometry 1x1+$right+$bottom &
 		snixembed &
-	elif [[ "$style" == "pwidgets" ]]; then
-		bash "$dir"/pwidgets/launch.sh --main
 	else
+		killall snixembed
 		polybar -q main -c "$dir/$style/config.ini" &	
+		snixembed &
 	fi
 }
 
@@ -75,8 +74,11 @@ else
 	Usage : launch.sh --theme
 		
 	Available Themes :
-	--blocks    --colorblocks    --cuts      --docky
-	--forest    --grayblocks     --hack      --material
-	--shades    --shapes
+	--blocks
+	--cuts	
+	--forest	
+	--hack	
+	--shades	
+	--shapes
 	EOF
 fi
