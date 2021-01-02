@@ -58,40 +58,6 @@ raise_or_minimize() {
 close() {
 	wmctrl -ic "$1"
 }
-
-slop_resize() {
-	wmctrl -ia "$1"
-	wmctrl -ir "$1" -e "$(slop -f 0,%x,%y,%w,%h)"
-}
-
-increment_size() {
-	while IFS="[ .]" read -r wid ws wx wy ww wh _; do
-		test "$wid" != "$1" && continue
-		x=$(( wx - wm_border_width * 2 - resize_increment / 2 ))
-		y=$(( wy - wm_border_width * 2 - resize_increment / 2 ))
-		w=$(( ww + resize_increment ))
-		h=$(( wh + resize_increment ))
-	done <<-EOF
-	$(wmctrl -lG)
-	EOF
-
-	wmctrl -ir "$1" -e "0,$x,$y,$w,$h"
-}
-
-decrement_size() {
-	while IFS="[ .]" read -r wid ws wx wy ww wh _; do
-		test "$wid" != "$1" && continue
-		x=$(( wx - wm_border_width * 2 + resize_increment / 2 ))
-		y=$(( wy - wm_border_width * 2 + resize_increment / 2 ))
-		w=$(( ww - resize_increment ))
-		h=$(( wh - resize_increment ))
-	done <<-EOF
-	$(wmctrl -lG)
-	EOF
-
-	wmctrl -ir "$1" -e "0,$x,$y,$w,$h"
-}
-
 # --- }}}
 
 
@@ -210,9 +176,7 @@ generate_window_list() {
 		# Add on-click action Polybar formatting
 		printf "%s" "%{A1:$on_click raise_or_minimize $wid:}"
 		printf "%s" "%{A2:$on_click close $wid:}"
-		printf "%s" "%{A3:$on_click slop_resize $wid:}"
-		printf "%s" "%{A4:$on_click increment_size $wid:}"
-		printf "%s" "%{A5:$on_click decrement_size $wid:}"
+		printf "%s" "%{A3:$on_click close $wid:}"
 		# Print the final window name
 		printf "%s" "$w_name"
 		printf "%s" "%{A}%{A}%{A}%{A}%{A}"
