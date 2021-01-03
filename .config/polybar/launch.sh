@@ -14,10 +14,6 @@ launch_bar() {
 	if [[ "$style" == "hack" || "$style" == "cuts" ]]; then
 		polybar -q top -c "$dir/$style/config.ini" &
 		polybar -q bottom -c "$dir/$style/config.ini" &
-		width=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f1)
-		height=$(xrandr --current | grep '*' | uniq | awk '{print $1}' | cut -d 'x' -f2)
-		right=$((width - 30))
-		bottom=$((height - 23))
 		snixembed &
 	else
 		killall snixembed
