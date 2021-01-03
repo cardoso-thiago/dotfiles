@@ -43,8 +43,6 @@ main() {
 	fi
 }
 
-
-
 # ON-CLICK FUNCTIONS {{{ ---
 
 raise_or_minimize() {
@@ -59,8 +57,6 @@ close() {
 	wmctrl -ic "$1"
 }
 # --- }}}
-
-
 
 # WINDOW LIST SETUP {{{ ---
 
