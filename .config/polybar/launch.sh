@@ -6,6 +6,7 @@ themes=(`ls --hide="launch.sh" $dir`)
 launch_bar() {
 	# Terminate already running bar instances
 	killall -q polybar
+	killall stalonetray
 	killall snixembed
 	# Wait until the processes have been shut down
 	while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
@@ -14,12 +15,15 @@ launch_bar() {
 	if [[ "$style" == "hack" || "$style" == "cuts" ]]; then
 		polybar -q top -c "$dir/$style/config.ini" &
 		polybar -q bottom -c "$dir/$style/config.ini" &
-		snixembed &
+		#Workaround for showing system tray
+		stalonetray &
+		sleep 1
+		killall stalonetray
 	else
 		killall snixembed
 		polybar -q main -c "$dir/$style/config.ini" &	
-		snixembed &
 	fi
+	snixembed &
 }
 
 if [[ "$1" == "--material" ]]; then
