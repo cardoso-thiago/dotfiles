@@ -21,6 +21,7 @@ alias l='lc'
 alias cls='clear; echo; echo; seq 1 (tput cols) | sort -R | spark | lolcat; echo; echo'
 
 ### Kubectl ###
+alias k='kubectl'
 alias kgp='kubectl get pods'
 alias kgpa='kubectl get pods --all-namespaces'
 alias kdp='kubectl describe pods'
@@ -58,3 +59,4 @@ set FZF_CD_COMMAND "fd -t d . $HOME"
 set PATH /home/$USER/.gem/ruby/2.7.0/bin:$PATH
 set PATH /home/$USER/.local/bin:$PATH
 set TERM xterm-256color
+set -x BC_ENV_ARGS "$HOME/.bc"
