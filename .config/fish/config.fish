@@ -56,7 +56,7 @@ set FZF_DEFAULT_COMMAND "fd . $HOME"
 set FZF_FIND_FILE_COMMAND "$FZF_DEFAULT_COMMAND"
 set FZF_CD_COMMAND "fd -t d . $HOME"
 
-set PATH /home/$USER/.gem/ruby/2.7.0/bin:$PATH
-set PATH /home/$USER/.local/bin:$PATH
+set PATH "$HOME/.gem/ruby/2.7.0/bin:$PATH"
+set PATH "$HOME/.local/bin:$PATH"
 set TERM xterm-256color
 set -x BC_ENV_ARGS "$HOME/.bc"
