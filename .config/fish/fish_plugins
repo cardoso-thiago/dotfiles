@@ -10,3 +10,4 @@ tuvistavie/fish-kubectl
 oh-my-fish/plugin-extract
 jethrokuan/fzf
 jorgebucaran/nvm.fish
+demartini/plugin-docker-compose
