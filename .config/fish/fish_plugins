@@ -9,3 +9,4 @@ eth-p/fish-plugin-sudo
 tuvistavie/fish-kubectl
 oh-my-fish/plugin-extract
 jethrokuan/fzf
+jorgebucaran/nvm.fish
