@@ -36,15 +36,23 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d . $HOME"
 export PATH=/home/cardoso/.local/bin:$PATH
 export TERM=xterm-256color
-export PATH="/home/$USER/.gem/ruby/2.7.0/bin:$PATH"
+export PATH="$HOME/.gem/ruby/2.7.0/bin:$PATH"
+export BC_ENV_ARGS="$HOME/.bc"
 
 alias ofd="xdg-open ."
 alias lc='colorls -1'
 alias lca='colorls -1a'
 alias lcf='colorls -la'
 alias lcg='colorls -la --gs'
+alias cls='clear; echo; echo; seq 1 $(tput cols) | sort -R | spark | lolcat; echo; echo'
 
 eval "$(starship init zsh)"
+
+colorscript random
+
+if [ -f "$HOME/.config/bash.command-not-found" ]; then
+    . "$HOME/.config/bash.command-not-found"
+fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/cardoso/.sdkman"

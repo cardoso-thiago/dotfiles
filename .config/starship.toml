@@ -53,6 +53,13 @@ $time\
 $status\
 $character"""
 
+[username]
+style_user = "green bold"
+style_root = "black bold"
+format = "[$user]($style) "
+disabled = false
+show_always = true
+
 [character]
 success_symbol = "[➜](bold green) "
 error_symbol = "[✗](bold red) "
@@ -84,12 +91,8 @@ threshold = 10
 style = "bold red"
 
 [[battery.display]]
-threshold = 60
+threshold = 30
 style = "bold yellow"
-
-[[battery.display]]
-threshold = 100
-style = "bold green"
 
 [docker_context]
 format = "via [🐋 $context ](blue bold)"

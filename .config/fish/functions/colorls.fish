@@ -1,5 +1,0 @@
-alias lc='colorls -1'
-alias lca='colorls -1a'
-alias lcf='colorls -la'
-alias lcg='colorls -la --gs'
-alias l='lc'
