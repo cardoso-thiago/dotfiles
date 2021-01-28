@@ -1,6 +1,6 @@
 export ZSH="/home/cardoso/.oh-my-zsh"
 
-plugins=(git docker docker-compose chucknorris alias-finder bgnotify common-aliases copydir copyfile sudo extract httpie ubuntu web-search z kubectl)
+plugins=(git docker docker-compose chucknorris alias-finder bgnotify common-aliases copydir copyfile sudo extract web-search z kubectl)
 source $ZSH/oh-my-zsh.sh
 
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
@@ -45,6 +45,7 @@ alias lca='colorls -1a'
 alias lcf='colorls -la'
 alias lcg='colorls -la --gs'
 alias cls='clear; echo; echo; seq 1 $(tput cols) | sort -R | spark | lolcat; echo; echo'
+alias goo='google'
 
 eval "$(starship init zsh)"
 
