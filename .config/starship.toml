@@ -97,6 +97,10 @@ style = "bold yellow"
 [docker_context]
 format = "via [🐋 $context ](blue bold)"
 
+[kubernetes]
+format = 'on [⛵ $context \($namespace\)](dimmed blue) '
+disabled = false
+
 [aws]
 symbol = " "
 
