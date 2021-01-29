@@ -1,6 +1,6 @@
 export ZSH="/home/cardoso/.oh-my-zsh"
 
-plugins=(git docker docker-compose chucknorris alias-finder bgnotify common-aliases copydir copyfile sudo extract web-search z kubectl zsh-autosuggestions)
+plugins=(git docker docker-compose chucknorris alias-finder bgnotify common-aliases copydir copyfile sudo extract web-search z kubectl zsh-autosuggestions bgnotify)
 source $ZSH/oh-my-zsh.sh
 
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
