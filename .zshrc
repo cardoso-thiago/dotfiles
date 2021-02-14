@@ -1,6 +1,6 @@
 export ZSH="/home/cardoso/.oh-my-zsh"
 
-plugins=(git docker docker-compose chucknorris alias-finder bgnotify common-aliases copydir copyfile sudo extract web-search z kubectl zsh-autosuggestions bgnotify)
+plugins=(git docker docker-compose chucknorris alias-finder bgnotify common-aliases copydir copyfile sudo extract web-search z kubectl zsh-autosuggestions)
 source $ZSH/oh-my-zsh.sh
 
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
@@ -49,6 +49,7 @@ alias lcf='colorls -la'
 alias lcg='colorls -la --gs'
 alias cls='clear; echo; echo; seq 1 $(tput cols) | sort -R | spark | lolcat; echo; echo'
 alias goo='google'
+alias ogr='open_command https://github.com/cardoso-thiago/${PWD##*/}'
 
 eval "$(starship init zsh)"
 
