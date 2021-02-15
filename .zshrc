@@ -59,6 +59,9 @@ if [ -f "$HOME/.config/bash.command-not-found" ]; then
     . "$HOME/.config/bash.command-not-found"
 fi
 
+[[ -r /usr/local/bin/rit ]] && rit completion zsh > ~/.rit_completion
+source ~/.rit_completion
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/cardoso/.sdkman"
 [[ -s "/home/cardoso/.sdkman/bin/sdkman-init.sh" ]] && source "/home/cardoso/.sdkman/bin/sdkman-init.sh"
