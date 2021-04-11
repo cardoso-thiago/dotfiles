@@ -50,6 +50,7 @@ alias lcg='colorls -la --gs'
 alias cls='clear; echo; echo; seq 1 $(tput cols) | sort -R | spark | lolcat; echo; echo'
 alias goo='google'
 alias ogr='open_command https://github.com/cardoso-thiago/${PWD##*/}'
+alias kbatt='upower -i /org/freedesktop/UPower/devices/keyboard_hid_dco2co26oe6o81o9b_battery | grep percentage | lolcat'
 
 eval "$(starship init zsh)"
 

@@ -14,8 +14,6 @@ matches:
     replace: "System.err.println(\"$|$\");"
   - trigger: "sout"
     replace: "System.out.println(\"$|$\");"
-  - trigger: ":oilu"
-    replace: "Oi meu amor pra sempre que eu amo demais"
   - trigger: ":sjson"
     replace: |
             {
