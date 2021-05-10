@@ -158,12 +158,18 @@ module.exports = {
     // "hyper-statusline",
     "hyperminimal",
     "gitrocket",
+    "hyper-search",
+    "hyperterm-dibdabs",
+    "hyperterm-tabs",
     // "hyperpower",
-    "hyper-atom-dark-transparent"
+    // "hyper-atom-dark-transparent"
     // "hyper-aurora"
     // "hyper-city-lights"
     // "hyper-clean"
     // "hyper-materialshell"
+    // "hyper-dracula"
+    "hyper-snazzy"
+    // "hyper-electron-highlighter"
   ],
 
   // in development, you can create a directory under
