@@ -136,7 +136,10 @@ module.exports = {
     // Whether to use the WebGL renderer. Set it to false to use canvas-based
     // rendering (slower, but supports transparent backgrounds)
     webGLRenderer: true,
-
+    summon: {
+      hideDock: true,
+      hideOnBlur: true,
+    },
     // for advanced config flags please refer to https://hyper.is/#cfg
   },
 
@@ -146,10 +149,6 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  summon: {
-    hideDock: true,
-    hideOnBlur: true,
-  },
   plugins: [
     "hypercwd",
     "hyperterm-paste",
@@ -161,6 +160,8 @@ module.exports = {
     "hyper-search",
     "hyperterm-dibdabs",
     "hyperterm-tabs",
+    "hyper-tabs-enhanced",
+    // "hyper-transparent",
     // "hyperpower",
     // "hyper-atom-dark-transparent"
     // "hyper-aurora"
