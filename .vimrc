@@ -3,6 +3,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdtree'
 Plug 'preservim/nerdcommenter'
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 call plug#end()
 
 :set expandtab
@@ -10,6 +11,8 @@ call plug#end()
 :set autoindent
 :set smartindent
 :set tabstop=4
+
+let g:lightline = {'colorscheme': 'catppuccin_macchiato'}
 
 set laststatus=2
 if !has('gui_running')
