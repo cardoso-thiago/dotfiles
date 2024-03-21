@@ -38,7 +38,6 @@ export FZF_DEFAULT_OPTS=" \
 --color=marker:#f4dbd6,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796"
 export PATH=/home/cardoso/.local/bin:$PATH
 export PATH=/home/cardoso/.local/share/gem/ruby/3.0.0/bin:$PATH
-export TERM=xterm-256color
 export SUDO_PROMPT=$'\a[sudo] Por favor, informe a senha: '
 export BROWSER=brave
 
@@ -58,6 +57,11 @@ alias btop='bpytop'
 alias yu='yay -Syu --devel --timeupdate'
 ### Limpeza de cache
 alias ycc='yay -Scc'
+
+bindkey '\e[1~' beginning-of-line
+bindkey '\e[2~' overwrite-mode
+bindkey '\e[3~' delete-char
+bindkey '\e[4~' end-of-line
 
 eval "$(starship init zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
