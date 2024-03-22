@@ -141,6 +141,7 @@ module.exports = {
         hideOnBlur: true,
         hotkey: 'Ctrl+;'
       },
+      catppuccinTheme: 'Macchiato',
       // for advanced config flags please refer to https://hyper.is/#cfg
     },
   
@@ -163,7 +164,8 @@ module.exports = {
       "hyper-tabs-enhanced",
       "hyper-single-instance",
       "space-pull",
-      "hyper-dark-scrollbar"
+      "hyper-dark-scrollbar",
+      "hypurr#latest"
     ],
   
     // in development, you can create a directory under
