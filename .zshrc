@@ -1,6 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-plugins=(git docker docker-compose chucknorris alias-finder bgnotify common-aliases copypath copyfile sudo extract web-search z kubectl zsh-autosuggestions)
+plugins=(git docker docker-compose chucknorris alias-finder bgnotify common-aliases copypath copyfile sudo extract web-search z kubectl zsh-autosuggestions dircycle gitignore)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -23,12 +23,14 @@ autoload -Uz _zinit
 zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
+zinit light Freed-Wu/zsh-help
+zinit light ChrisPenner/copy-pasta
+zinit light brymck/print-alias
 
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+eval "$(fzf --zsh)"
 
 ZSH_ALIAS_FINDER_AUTOMATIC=true
+export PRINT_ALIAS_PREFIX=' '
 export FZF_DEFAULT_COMMAND="fd . $HOME"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d . $HOME"
@@ -58,6 +60,13 @@ alias yu='yay -Syu --devel --timeupdate'
 ### Limpeza de cache
 alias ycc='yay -Scc'
 
+# Alias YADM
+alias yadd='yadm add'
+alias yau='yadm add -u'
+alias yacm='yadm commit -m'
+alias yap='yadm push'
+alias yas='yadm status'
+
 bindkey '\e[1~' beginning-of-line
 bindkey '\e[2~' overwrite-mode
 bindkey '\e[3~' delete-char
@@ -72,6 +81,11 @@ fi
 
 echo "\n"
 fastfetch -c .config/fastfetch/config.jsonc
+
+if [[ $(yadm status --porcelain) ]]; then
+    echo "\n"
+    print -P '%B%F{red}There are local configuration changes. YADM sync required.%f%b'
+fi
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"

@@ -6,7 +6,7 @@
 
 ## Plasmoids adicionais utilizados
 
-* [Shutdown or Switch](https://store.kde.org/p/1288430)
+* [Simple Customizable Power Menu for KDE](https://store.kde.org/p/2137217)
 * [plasmusic-toolbar](https://store.kde.org/p/2128143)
 * [Vector Clock Plasma6](https://store.kde.org/p/2137726)
 * [Separator Line](https://store.kde.org/p/2136852)
