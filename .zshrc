@@ -80,7 +80,7 @@ if [ -f "$HOME/.config/bash.command-not-found" ]; then
 fi
 
 echo "\n"
-fastfetch -c .config/fastfetch/config.jsonc
+fastfetch -c /home/cardoso/.config/fastfetch/config.jsonc
 
 if [[ $(yadm status --porcelain) ]]; then
     echo "\n"
