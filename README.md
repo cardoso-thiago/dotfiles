@@ -8,7 +8,6 @@
 
 * [Simple Customizable Power Menu for KDE](https://store.kde.org/p/2137217)
 * [plasmusic-toolbar](https://store.kde.org/p/2128143)
-* [Vector Clock Plasma6](https://store.kde.org/p/2137726)
 * [Separator Line](https://store.kde.org/p/2136852)
 * [Condensed Weather [Plasma 6]](https://store.kde.org/p/2137197)
 * [Command Output](https://store.kde.org/p/2136636/)
