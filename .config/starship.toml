@@ -44,8 +44,8 @@ $status\
 $character"""
 
 [username]
-style_user = "green bold"
-style_root = "black bold"
+style_user = "bold teal"
+style_root = "bold base"
 format = "[$user]($style) "
 disabled = false
 show_always = true
@@ -63,7 +63,7 @@ read_only = " "
 truncation_length = 5
 truncate_to_repo = true
 format = "[$path]($style)[$lock_symbol]($lock_style) "
-style = "bold cyan"
+style = "sapphire"
 disabled = false
 truncation_symbol = "…/"
 
@@ -87,7 +87,7 @@ style = "bold yellow"
 format = "via [🐋 $context ](blue bold)"
 
 [kubernetes]
-format = 'on [⛵ $context \($namespace\)](dimmed blue) '
+format = 'on [⛵ $context \($namespace\)](blue) '
 disabled = false
 
 [aws]
@@ -102,11 +102,19 @@ symbol = " "
 [elixir]
 symbol = " "
 
-[elm]
-symbol = " "
-
 [git_branch]
 symbol = " "
+style = "bold mauve"
+
+[git_status]
+format = '([$all_status$ahead_behind]($style) )'
+conflicted = " "
+untracked = " "
+modified = " "
+deleted = " "
+staged = " "
+renamed = " "
+stashed = " "
 
 [golang]
 symbol = " "
@@ -126,17 +134,11 @@ symbol = " "
 [memory_usage]
 symbol = " "
 
-[nim]
-symbol = " "
-
 [nix_shell]
 symbol = " "
 
 [nodejs]
 symbol = " "
-
-[package]
-symbol = " "
 
 [perl]
 symbol = " "
@@ -152,9 +154,6 @@ symbol = " "
 
 [rust]
 symbol = " "
-
-[swift]
-symbol = "ﯣ "
 
 [palettes.catppuccin_macchiato]
 rosewater = "#f4dbd6"
