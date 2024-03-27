@@ -95,7 +95,7 @@ fi
 
 function check_git_directory() {
     if [[ -d .git ]]; then
-        onefetch
+        onefetch --text-colors 9 10 11 12 13 --no-title --number-of-file-churns=0 --no-art
     fi
 }
 
