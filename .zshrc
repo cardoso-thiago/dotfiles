@@ -28,6 +28,8 @@ zinit light ChrisPenner/copy-pasta
 zinit light brymck/print-alias
 
 eval "$(fzf --zsh)"
+eval $(thefuck --alias)
+eval "$(navi widget zsh)"
 
 ZSH_ALIAS_FINDER_AUTOMATIC=true
 export PRINT_ALIAS_PREFIX=' '
@@ -42,6 +44,7 @@ export PATH=/home/cardoso/.local/bin:$PATH
 export PATH=/home/cardoso/.local/share/gem/ruby/3.0.0/bin:$PATH
 export SUDO_PROMPT=$'\a[sudo] Por favor, informe a senha: '
 export BROWSER=brave
+export NAVI_PATH='~/.config/custom-navi-cheats:~/.local/share/navi/cheats'
 
 alias ofd="open_command ."
 alias lc='colorls -1'
@@ -55,10 +58,13 @@ alias mbatt='upower -i /org/freedesktop/UPower/devices/battery_hid_dco2co26ofdo4
 alias rr='rm -rf'
 alias mirrors='sudo reflector --latest 10 --age 24 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 alias btop='bpytop'
+alias nfw='navi fn welcome'
 ### Atualização completa
 alias yu='yay -Syu --devel --timeupdate'
 ### Limpeza de cache
 alias ycc='yay -Scc'
+### Script para limpar pacotes órfãos
+alias yor='sh ~/HDD/Documentos/Configurações/orphanage.sh' 
 
 # Alias YADM
 alias yadd='yadm add'

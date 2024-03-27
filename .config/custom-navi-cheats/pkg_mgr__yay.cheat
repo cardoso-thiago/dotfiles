@@ -1,0 +1,28 @@
+% yay
+
+# Update all packages
+yay
+
+# Present package-installation selection menu.
+yay <search_term>
+
+# Download PKGBUILD from ABS or AUR.
+yay -G <package_name>
+
+# Print to stdout PKGBUILD from ABS or AUR.
+yay -Gp <package_name>
+
+# Print system statistics.
+yay -Ps
+
+# Perform system upgrade, but also check for development package updates.
+yay -Syu --devel
+
+# Perform system upgrade and use PKGBUILD modification time (not version number) to determine update.
+yay -Syu --timeupdate
+
+# Clean up all local caches
+yay -Scc
+
+# Remove a package(s) and config files by name
+yay -Rns <package_name>
