@@ -86,12 +86,21 @@ if [ -f "$HOME/.config/bash.command-not-found" ]; then
 fi
 
 echo "\n"
-fastfetch -c /home/cardoso/.config/fastfetch/config.jsonc
+fastfetch -c ~/.config/fastfetch/config-simple.jsonc
 
 if [[ $(yadm status --porcelain) ]]; then
     echo "\n"
     print -P '%B%F{red}There are local configuration changes. YADM sync required.%f%b'
 fi
+
+function check_git_directory() {
+    if [[ -d .git ]]; then
+        onefetch
+    fi
+}
+
+# Defina um hook para o comando 'cd' para verificar o diretório ao mudar de pasta
+chpwd_functions+=(check_git_directory)
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
