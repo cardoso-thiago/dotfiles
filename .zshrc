@@ -87,9 +87,9 @@ fi
 
 echo "\n"
 fastfetch -c ~/.config/fastfetch/config-simple.jsonc
+echo "\n"
 
 if [[ $(yadm status --porcelain) ]]; then
-    echo "\n"
     print -P '%B%F{red}There are local configuration changes. YADM sync required.%f%b'
 fi
 
