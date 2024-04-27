@@ -28,7 +28,6 @@ zinit light ChrisPenner/copy-pasta
 zinit light brymck/print-alias
 
 eval "$(fzf --zsh)"
-eval $(thefuck --alias)
 eval "$(navi widget zsh)"
 
 ZSH_ALIAS_FINDER_AUTOMATIC=true
