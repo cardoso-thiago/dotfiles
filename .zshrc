@@ -101,6 +101,8 @@ function check_git_directory() {
 # Defina um hook para o comando 'cd' para verificar o diretório ao mudar de pasta
 chpwd_functions+=(check_git_directory)
 
+test -f ~/.stk/bin/.zshrc && . ~/.stk/bin/.zshrc
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
