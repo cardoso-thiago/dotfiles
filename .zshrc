@@ -26,6 +26,7 @@ zinit light zsh-users/zsh-completions
 zinit light Freed-Wu/zsh-help
 zinit light ChrisPenner/copy-pasta
 zinit light brymck/print-alias
+zinit light memark/zsh-dotnet-completion
 
 eval "$(fzf --zsh)"
 eval "$(navi widget zsh)"
