@@ -43,7 +43,7 @@ export FZF_DEFAULT_OPTS=" \
 export PATH=/home/cardoso/.local/bin:$PATH
 export PATH=/home/cardoso/.local/share/gem/ruby/3.0.0/bin:$PATH
 export SUDO_PROMPT=$'\a[sudo] Por favor, informe a senha: '
-export BROWSER=brave
+export BROWSER=firefox
 export NAVI_PATH='~/.config/custom-navi-cheats:~/.local/share/navi/cheats'
 
 alias ofd="open_command ."
