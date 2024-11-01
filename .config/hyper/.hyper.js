@@ -154,7 +154,7 @@ module.exports = {
     plugins: [
       "hypercwd",
       "hyperterm-paste",
-      // "hyperterm-summon",
+      "hyperterm-summon",
       "hyper-pane",
       "hyperminimal",
       "gitrocket",
