@@ -45,6 +45,7 @@ export PATH=/home/cardoso/.local/share/gem/ruby/3.0.0/bin:$PATH
 export SUDO_PROMPT=$'\a[sudo] Por favor, informe a senha: '
 export BROWSER=firefox
 export NAVI_PATH='~/.config/custom-navi-cheats:~/.local/share/navi/cheats'
+export EDITOR=code
 
 alias ofd="open_command ."
 alias lc='colorls -1'
