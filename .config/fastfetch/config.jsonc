@@ -5,13 +5,8 @@
     },
     "modules": [
         {
-            "type": "host",
-            "key": "╭─",
-            "keyColor": "green"
-        },
-        {
             "type": "cpu",
-            "key": "├─󰍛",
+            "key": "╭─󰍛",
             "keyColor": "green"
         },
         {
@@ -26,17 +21,7 @@
         },
         {
             "type": "memory",
-            "key": "├─",
-            "keyColor": "green"
-        },
-        {
-            "type": "battery",
-            "key": "╰─",
-            "keyColor": "green"
-        },
-        {
-            "type": "poweradapter",
-            "key": "╰─",
+            "key": "╰─",
             "keyColor": "green"
         },
         "break",
@@ -80,6 +65,11 @@
         {
             "type": "packages",
             "key": "├─󰏖",
+            "keyColor": "blue"
+        },
+        {
+            "type": "player",
+            "key": "├─󰝚",
             "keyColor": "blue"
         },
         {
