@@ -1,0 +1,2 @@
+[core]
+	excludesfile = /home/cardoso/.config/yadm/yadm.gitignore
