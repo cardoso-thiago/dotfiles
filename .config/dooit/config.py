@@ -1,6 +1,8 @@
 from dooit.ui.api import DooitAPI, subscribe
 from dooit.ui.api.events import Startup
 from dooit.api.theme import DooitThemeBase
+from dooit.api import Todo
+from datetime import datetime
 
 @subscribe(Startup)
 def dashboard_setup(api: DooitAPI, _):
@@ -12,6 +14,10 @@ def dashboard_setup(api: DooitAPI, _):
             "Pressione '?' para ajuda.",
         ]
     )
+
+    fmt = api.formatter
+    fmt.todos.due.add(custom_due)
+
     # Key bindings
     api.keys.set(["j", "<down>"], api.move_down)
     api.keys.set(["k", "<up>"], api.move_up)
@@ -41,6 +47,10 @@ def dashboard_setup(api: DooitAPI, _):
     # api.keys.set("/", api.start_search)
     # api.keys.set("<ctrl+s>", api.start_sort)
     # api.keys.set("<ctrl+q>", api.quit)
+
+def custom_due(due: datetime, model: Todo) -> str:
+    if due is not None:
+        return due.strftime("%d/%m/%Y")
 
 class CatppuccinMacchiato(DooitThemeBase):
     _name = "dooit-catppuccin-macchiato"
