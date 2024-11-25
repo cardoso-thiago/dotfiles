@@ -3,6 +3,9 @@ from dooit.ui.api.events import Startup
 from dooit.api.theme import DooitThemeBase
 from dooit.api import Todo
 from datetime import datetime
+from dooit_extras.formatters import *
+from rich.style import Style
+from rich.text import Text
 
 @subscribe(Startup)
 def dashboard_setup(api: DooitAPI, _):
@@ -17,7 +20,18 @@ def dashboard_setup(api: DooitAPI, _):
 
     fmt = api.formatter
     fmt.todos.due.add(custom_due)
+    # fmt.todos.due.add(due_danger_today())
 
+    fmt.todos.status.add(status_icons(completed=" ", pending="󰞋 ", overdue="󰅗 "))
+
+    u_icons = {1: "  󰎤", 2: "  󰎧", 3: "  󰎪", 4: "  󰎭"}
+    fmt.todos.urgency.add(urgency_icons(icons=u_icons))
+
+    fmt.todos.description.add(description_strike_completed())
+    fmt.todos.description.add(description_children_count())
+    fmt.todos.description.add(description_highlight_link())
+    fmt.todos.description.add(todo_description_progress())
+    
     # Key bindings
     api.keys.set(["j", "<down>"], api.move_down)
     api.keys.set(["k", "<up>"], api.move_up)
@@ -48,8 +62,16 @@ def dashboard_setup(api: DooitAPI, _):
     # api.keys.set("<ctrl+s>", api.start_sort)
     # api.keys.set("<ctrl+q>", api.quit)
 
-def custom_due(due: datetime, model: Todo) -> str:
+def custom_due(due: datetime, model: Todo, fmt: str = "{}") -> str:
     if due is not None:
+        if due.date() == datetime.today().date():
+            return Text(
+                fmt.format("Hoje"),
+                style=Style(
+                    color="#ED8796",
+                    bold=True,
+                ),
+            ).markup
         return due.strftime("%d/%m/%Y")
 
 class CatppuccinMacchiato(DooitThemeBase):
