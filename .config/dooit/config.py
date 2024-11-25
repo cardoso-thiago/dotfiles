@@ -94,5 +94,5 @@ class CatppuccinMacchiato(DooitThemeBase):
     magenta: str = "#F5BDE6"
     cyan: str = "#8BD5CA"
 
-    primary: str = blue
-    secondary: str = cyan
+    primary: str = cyan
+    secondary: str = purple
