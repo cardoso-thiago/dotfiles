@@ -19,14 +19,18 @@ def dashboard_setup(api: DooitAPI, _):
     )
 
     fmt = api.formatter
+    # Workspace Count Children
+    fmt.workspaces.description.add(description_children_count())
+
+    # Todo Custom
+    # Due Custom (Format/Today)
     fmt.todos.due.add(custom_due)
-    # fmt.todos.due.add(due_danger_today())
-
-    fmt.todos.status.add(status_icons(completed=" ", pending="󰞋 ", overdue="󰅗 "))
-
-    u_icons = {1: "  󰎤", 2: "  󰎧", 3: "  󰎪", 4: "  󰎭"}
+    # Status Icons
+    fmt.todos.status.add(status_icons(completed=" ", pending="󰝣 ", overdue="󰅗 "))
+    # Urgency Icons
+    u_icons = {1: "  󰲠", 2: "  󰲢", 3: "  󰲤", 4: "  󰲦"}
     fmt.todos.urgency.add(urgency_icons(icons=u_icons))
-
+    # Description
     fmt.todos.description.add(description_strike_completed())
     fmt.todos.description.add(description_children_count())
     fmt.todos.description.add(description_highlight_link())
