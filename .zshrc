@@ -103,9 +103,6 @@ function check_git_directory() {
 # Defina um hook para o comando 'cd' para verificar o diretório ao mudar de pasta
 chpwd_functions+=(check_git_directory)
 
-python3 /home/cardoso/.config/dooit/pending.py
-alias ded='python3 /home/cardoso/.config/dooit/pending_details.py'
-
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
