@@ -8,7 +8,7 @@ def get_folders(api_base_url, token):
     return response.json()["items"]
 
 def get_notes(api_base_url, folder_id, token):
-    """Obtém as tarefas de um caderno específico com os campos de title e body."""
+    """Obtém as tarefas de um caderno específico com os campos id, title e body."""
     response = requests.get(f"{api_base_url}/folders/{folder_id}/notes?token={token}&fields=id,title,body")
     response.raise_for_status()
     return response.json()["items"]
@@ -31,12 +31,10 @@ def export_to_markdown(api_base_url, token, folder_name, notes, include_full_con
             file.write(f"- **{note['title']}**\n")
             
             if include_full_content:
-                # Adicionar tags à nota
                 tags = get_tags(api_base_url, note["id"], token)
                 if tags:
                     file.write(f"> **Tags: {', '.join(tags)}**\n")
                 
-                # Adicionar corpo da nota
                 if note.get("body"):
                     for line in note["body"].splitlines():
                         file.write(f"> {line}\n")
