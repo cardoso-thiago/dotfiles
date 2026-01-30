@@ -31,6 +31,11 @@ zinit light memark/zsh-dotnet-completion
 eval "$(fzf --zsh)"
 eval "$(navi widget zsh)"
 
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+
 ZSH_ALIAS_FINDER_AUTOMATIC=true
 export PRINT_ALIAS_PREFIX=' '
 export FZF_DEFAULT_COMMAND="find . $HOME"
