@@ -1,6 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-plugins=(git docker docker-compose chucknorris alias-finder bgnotify common-aliases copypath copyfile sudo extract web-search z kubectl zsh-autosuggestions dircycle gitignore)
+plugins=(git docker docker-compose chucknorris alias-finder bgnotify common-aliases copypath copyfile sudo extract web-search z kubectl zsh-autosuggestions dircycle gitignore zsh-navigation-tools)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -71,6 +71,8 @@ alias yu='yay -Syu --devel --timeupdate'
 alias ycc='yay -Scc'
 ### Script para limpar pacotes órfãos
 alias yor='sh ~/HDD/Documentos/Configurações/orphanage.sh' 
+alias naliases=n-aliases ncd=n-cd nenv=n-env nfunctions=n-functions nhistory=n-history
+alias nkill=n-kill noptions=n-options npanelize=n-panelize nhelp=n-help
 
 # Alias YADM
 alias yadd='yadm add'
