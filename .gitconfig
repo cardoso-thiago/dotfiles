@@ -15,3 +15,5 @@
 [user]
 	email = thiago.cardoso33@gmail.com
 	name = cardoso-thiago
+[credential]
+	helper = store
