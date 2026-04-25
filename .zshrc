@@ -52,6 +52,9 @@ export BROWSER=firefox
 export NAVI_PATH='~/.config/custom-navi-cheats:~/.local/share/navi/cheats'
 export EDITOR=vim
 
+### Override para rodar o ollama em modo de compatibilidade com o 8700G
+export HSA_OVERRIDE_GFX_VERSION=11.0.0
+
 alias ofd="open_command ."
 alias lc='colorls -1'
 alias lca='colorls -1a'
