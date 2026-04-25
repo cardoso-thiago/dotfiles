@@ -1,0 +1,129 @@
+/* config.rasi — Catppuccin Mocha, parse-safe */
+
+configuration {
+    modi:                   "drun,run";
+    show-icons:             true;
+    display-drun:           " Apps";
+    display-run:            " Run";
+    drun-display-format:    "{name}";
+    icon-theme:             "Papirus-Dark";
+    terminal:               "xfce4-terminal";
+    font:                   "JetBrains Mono 12";
+    kb-cancel:              "Escape,Alt+space";
+    click-to-exit:          true;
+}
+
+* {
+    background-color:   transparent;
+    text-color:         #cdd6f4;
+}
+
+window {
+    location:           center;
+    anchor:             center;
+    width:              680px;
+    border-radius:      14px;
+    border:             2px;
+    border-color:       #cba6f7;
+    background-color:   #1e1e2e;
+    padding:            0px;
+}
+
+mainbox {
+    padding:            8px;
+    spacing:            6px;
+    background-color:   transparent;
+}
+
+inputbar {
+    background-color:   #181825;
+    border-radius:      10px;
+    padding:            10px 14px;
+    spacing:            10px;
+}
+
+prompt {
+    text-color:         #cba6f7;
+    vertical-align:     0.5;
+}
+
+entry {
+    text-color:         #cdd6f4;
+    placeholder-color:  #6c7086;
+    placeholder:        "Buscar aplicativos…";
+    vertical-align:     0.5;
+}
+
+mode-switcher {
+    background-color:   transparent;
+    spacing:            6px;
+}
+
+button {
+    background-color:   #313244;
+    border-radius:      8px;
+    padding:            6px 14px;
+    text-color:         #a6adc8;
+}
+
+button selected {
+    background-color:   #cba6f7;
+    text-color:         #11111b;
+}
+
+listview {
+    background-color:   transparent;
+    scrollbar:          false;
+    spacing:            4px;
+    padding:            4px 0px;
+    lines:              8;
+    cycle:              true;
+    dynamic:            true;
+}
+
+element {
+    background-color:   transparent;
+    border-radius:      8px;
+    padding:            8px 12px;
+    spacing:            12px;
+    orientation:        horizontal;
+}
+
+element normal.normal {
+    background-color:   transparent;
+    text-color:         #cdd6f4;
+}
+
+element selected.normal {
+    background-color:   #45475a;
+    text-color:         #cdd6f4;
+}
+
+element alternate.normal {
+    background-color:   transparent;
+    text-color:         #cdd6f4;
+}
+
+element-icon {
+    size:               36px;
+    vertical-align:     0.5;
+    background-color:   transparent;
+}
+
+element-text {
+    vertical-align:     0.5;
+    background-color:   transparent;
+    text-color:         inherit;
+    highlight:          bold;
+}
+
+message {
+    background-color:   #313244;
+    border-radius:      8px;
+    padding:            8px 14px;
+}
+
+textbox {
+    background-color:   transparent;
+    text-color:         #bac2de;
+}
