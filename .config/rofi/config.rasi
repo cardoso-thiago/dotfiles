@@ -1,4 +1,4 @@
-/* config.rasi — Catppuccin Mocha, parse-safe */
+/* config.rasi — Catppuccin Macchiato, parse-safe */
 
 configuration {
     modi:                   "drun,run";
@@ -15,7 +15,7 @@ configuration {
 
 * {
     background-color:   transparent;
-    text-color:         #cdd6f4;
+    text-color:         #cad3f5;
 }
 
 window {
@@ -24,8 +24,8 @@ window {
     width:              680px;
     border-radius:      14px;
     border:             2px;
-    border-color:       #cba6f7;
-    background-color:   #1e1e2e;
+    border-color:       #c6a0f6;
+    background-color:   #24273a;
     padding:            0px;
 }
 
@@ -36,20 +36,20 @@ mainbox {
 }
 
 inputbar {
-    background-color:   #181825;
+    background-color:   #1e2030;
     border-radius:      10px;
     padding:            10px 14px;
     spacing:            10px;
 }
 
 prompt {
-    text-color:         #cba6f7;
+    text-color:         #c6a0f6;
     vertical-align:     0.5;
 }
 
 entry {
-    text-color:         #cdd6f4;
-    placeholder-color:  #6c7086;
+    text-color:         #cad3f5;
+    placeholder-color:  #6e738d;
     placeholder:        "Buscar aplicativos…";
     vertical-align:     0.5;
 }
@@ -60,15 +60,15 @@ mode-switcher {
 }
 
 button {
-    background-color:   #313244;
+    background-color:   #363a4f;
     border-radius:      8px;
     padding:            6px 14px;
-    text-color:         #a6adc8;
+    text-color:         #a5adcb;
 }
 
 button selected {
-    background-color:   #cba6f7;
-    text-color:         #11111b;
+    background-color:   #c6a0f6;
+    text-color:         #181926;
 }
 
 listview {
@@ -91,17 +91,17 @@ element {
 
 element normal.normal {
     background-color:   transparent;
-    text-color:         #cdd6f4;
+    text-color:         #cad3f5;
 }
 
 element selected.normal {
-    background-color:   #45475a;
-    text-color:         #cdd6f4;
+    background-color:   #494d64;
+    text-color:         #cad3f5;
 }
 
 element alternate.normal {
     background-color:   transparent;
-    text-color:         #cdd6f4;
+    text-color:         #cad3f5;
 }
 
 element-icon {
@@ -118,12 +118,12 @@ element-text {
 }
 
 message {
-    background-color:   #313244;
+    background-color:   #363a4f;
     border-radius:      8px;
     padding:            8px 14px;
 }
 
 textbox {
     background-color:   transparent;
-    text-color:         #bac2de;
+    text-color:         #b8c0e0;
 }
