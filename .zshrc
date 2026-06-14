@@ -68,11 +68,6 @@ alias rr='rm -rf'
 alias mirrors='sudo reflector --latest 10 --age 24 --protocol https --sort rate --save /etc/pacman.d/mirrorlist'
 alias btop='bpytop'
 alias nfw='navi fn welcome'
-### Atualização completa
-alias yu='yay -Syu --devel --timeupdate'
-### Limpeza de cache
-alias ycc='yay -Scc'
-### Script para limpar pacotes órfãos
 alias yor='sh ~/HDD/Documentos/Configurações/orphanage.sh' 
 alias naliases=n-aliases ncd=n-cd nenv=n-env nfunctions=n-functions nhistory=n-history
 alias nkill=n-kill noptions=n-options npanelize=n-panelize nhelp=n-help
