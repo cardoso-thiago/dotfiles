@@ -48,18 +48,29 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 theme = Catppuccin Macchiato
+
 window-decoration = false
 window-step-resize = true
 window-padding-balance = true
 window-padding-color = extend
 window-padding-x = 10
 window-padding-y = 5
+
 mouse-hide-while-typing = true
+
 font-family = "MesloLGM Nerd Font"
 font-family = "FiraMono Nerd Font"
 font-family = "DejaVu Sans Mono"
 font-family = "Consolas"
 font-family = "monospace"
+
 shell-integration-features = "ssh-terminfo,ssh-env"
+
 custom-shader = shaders/ripple_rectangle_cursor.glsl
 custom-shader = shaders/cursor_sweep.glsl
+
+keybind = ctrl+up=new_split:up
+keybind = ctrl+down=new_split:down
+keybind = ctrl+left=new_split:left
+keybind = ctrl+right=new_split:right
+keybind = ctrl+w=close_surface
