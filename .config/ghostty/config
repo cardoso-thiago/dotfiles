@@ -66,8 +66,31 @@ font-family = "monospace"
 
 shell-integration-features = "ssh-terminfo,ssh-env"
 
-custom-shader = shaders/ripple_rectangle_cursor.glsl
-custom-shader = shaders/cursor_sweep.glsl
+# custom-shader = shaders/cursor_sweep.glsl
+# custom-shader = shaders/cursor_tail.glsl
+# custom-shader = shaders/cursor_warp.glsl
+# custom-shader = shaders/rectangle_boom_cursor.glsl
+# custom-shader = shaders/ripple_cursor.glsl
+# custom-shader = shaders/ripple_rectangle_cursor.glsl
+custom-shader = shaders/sonic_boom_cursor.glsl
+
+# custom-shader = shaders/bloom.glsl
+# custom-shader = shaders/cubes.glsl
+custom-shader = shaders/cursor_blaze.glsl
+# custom-shader = shaders/fireworks-rockets.glsl
+# custom-shader = shaders/fireworks.glsl
+# custom-shader = shaders/galaxy.glsl
+# custom-shader = shaders/gears-and-belts.glsl
+# custom-shader = shaders/glow-rgbsplit-twitchy.glsl
+# custom-shader = shaders/in-game-crt-cursor.glsl
+# custom-shader = shaders/in-game-crt.glsl
+# custom-shader = shaders/inside-the-matrix.glsl
+# custom-shader = shaders/retro-terminal.glsl
+# custom-shader = shaders/smear_cursor_blocks.glsl
+# custom-shader = shaders/spotlight.glsl
+# custom-shader = shaders/starfield-colors.glsl
+# custom-shader = shaders/starfield.glsl
+# custom-shader = shaders/tft.glsl
 
 keybind = ctrl+up=new_split:up
 keybind = ctrl+down=new_split:down
