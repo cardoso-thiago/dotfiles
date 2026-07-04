@@ -139,7 +139,7 @@ module.exports = {
       summon: {
         hideDock: true,
         hideOnBlur: true,
-        hotkey: 'Ctrl+;'
+        hotkey: 'Ctrl+/'
       },
       catppuccinTheme: 'Macchiato',
       // for advanced config flags please refer to https://hyper.is/#cfg
