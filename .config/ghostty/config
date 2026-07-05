@@ -98,3 +98,8 @@ keybind = ctrl+left=new_split:left
 keybind = ctrl+right=new_split:right
 keybind = ctrl+w=close_surface
 keybind = shift+insert=paste_from_clipboard
+keybind = global:ctrl+backquote=toggle_quick_terminal
+
+quick-terminal-size = 75%,100%
+quick-terminal-autohide = true
+initial-window = false
