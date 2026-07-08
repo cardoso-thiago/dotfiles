@@ -66,6 +66,10 @@ keybind = ctrl+shift+right=new_split:right
 keybind = ctrl+w=close_surface
 keybind = shift+insert=paste_from_clipboard
 keybind = global:ctrl+backquote=toggle_quick_terminal
+keybind = shift+left=goto_split:left
+keybind = shift+right=goto_split:right
+keybind = shift+up=goto_split:up
+keybind = shift+down=goto_split:down
 
 quick-terminal-size = 75%,100%
 quick-terminal-autohide = true
