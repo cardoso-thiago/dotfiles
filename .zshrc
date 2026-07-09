@@ -55,7 +55,7 @@ export EDITOR=vim
 ### Override para rodar o ollama em modo de compatibilidade com o 8700G
 export HSA_OVERRIDE_GFX_VERSION=11.0.0
 
-alias ofd="open_command ."
+alias ofd="open_command"
 alias lc='colorls -1'
 alias lca='colorls -1a'
 alias lcf='colorls -la'
@@ -103,6 +103,13 @@ function check_git_directory() {
     if [[ -d .git ]]; then
         onefetch --text-colors 9 10 11 12 13 --no-title --number-of-file-churns=0 --no-art
     fi
+}
+
+open_command() {
+  local target="${1:-.}"
+  # Se for um arquivo ou pasta local, transforma em caminho absoluto
+  [[ -e "$target" ]] && target="${target:A}"
+  nohup xdg-open "$target" >/dev/null 2>&1 &
 }
 
 # Defina um hook para o comando 'cd' para verificar o diretório ao mudar de pasta

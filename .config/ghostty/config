@@ -18,6 +18,9 @@ window-padding-x = 10
 window-padding-y = 5
 window-save-state = never
 
+cursor-style = block
+cursor-style-blink = true
+
 shell-integration = zsh
 mouse-hide-while-typing = true
 copy-on-select = clipboard
@@ -31,7 +34,7 @@ font-family = "DejaVu Sans Mono"
 font-family = "Consolas"
 font-family = "monospace"
 
-shell-integration-features = "ssh-terminfo,ssh-env"
+shell-integration-features = "ssh-terminfo,ssh-env,no-cursor"
 
 # custom-shader = shaders/cursor_sweep.glsl
 # custom-shader = shaders/cursor_tail.glsl
@@ -74,3 +77,4 @@ keybind = shift+down=goto_split:down
 quick-terminal-size = 75%,100%
 quick-terminal-autohide = true
 initial-window = false
+quit-after-last-window-closed = false
