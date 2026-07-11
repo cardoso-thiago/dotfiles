@@ -1,0 +1,18 @@
+#!/bin/bash
+
+text_overflow_handle() {
+    TEXT="$1"
+    if [ ${#TEXT} -gt 30 ]; then
+        echo "${TEXT:0:30}..."
+    else
+        echo "$TEXT"
+    fi
+}
+
+if [[ "$1" == "--title" ]]; then
+    text_overflow_handle "$(playerctl metadata title 2>/dev/null)"
+elif [[ "$1" == "--artist" ]]; then
+    text_overflow_handle "$(playerctl metadata artist 2>/dev/null)"
+elif [[ "$1" == "--get-art" ]]; then
+    playerctl metadata mpris:artUrl 2>/dev/null
+fi
