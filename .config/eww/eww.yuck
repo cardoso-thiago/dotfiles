@@ -43,24 +43,24 @@
 
             ;; cpu
             (box :orientation "horizontal" :class "sysmon-item" :halign "start"
-                (label :class "sysmon" :halign "start" :text "")
+                (label :class "sysmon ico" :halign "start" :text "")
                 (label :class "sysmon-bar" :halign "start" :text "${cpubar}"))
 
             ;; ram
             (box :orientation "horizontal" :class "sysmon-item" :halign "start"
-                (label :class "sysmon" :halign "start" :text "")
+                (label :class "sysmon ico" :halign "start" :text "")
                 (label :class "sysmon-bar" :halign "start" :text "${rambar}"))
 
             ;; disk
             (box :orientation "horizontal" :class "sysmon-item" :halign "start"
-                (label :class "sysmon" :halign "start" :text "")
+                (label :class "sysmon ico" :halign "start" :text "")
                 (label :class "sysmon-bar" :halign "start" :text "${diskbar}"))
 
             (label :class "sysmon-item sysmon-label" :halign "start" :text " ") ;; gap
-            (label :class "sysmon-item sysmon-label" :halign "start" :text "   ${fan} RPM") ;; fan
-            (label :class "sysmon-item sysmon-label" :halign "start" :text "   ${temp}°C") ;; temp
-            (label :class "sysmon-item sysmon-label" :halign "start" :text "   ${round(EWW_NET.eno1.NET_UP / 1000, 1) } kB/s") ;; net up
-            (label :class "sysmon-item sysmon-label" :halign "start" :text "   ${round(EWW_NET.eno1.NET_DOWN / 1000, 1) } kB/s") ;; net down
+            (label :class "sysmon-item sysmon-label ico" :halign "start" :text "   ${fan} RPM") ;; fan
+            (label :class "sysmon-item sysmon-label ico" :halign "start" :text "   ${temp}°C") ;; temp
+            (label :class "sysmon-item sysmon-label ico" :halign "start" :text "   ${round(EWW_NET.eno1.NET_UP / 1000, 1) } kB/s") ;; net up
+            (label :class "sysmon-item sysmon-label ico" :halign "start" :text "   ${round(EWW_NET.eno1.NET_DOWN / 1000, 1) } kB/s") ;; net down
         )
     )
 )

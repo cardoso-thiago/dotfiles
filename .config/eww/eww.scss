@@ -66,3 +66,8 @@ $font-white: #dedede;
     font-weight: 500;
 }
 
+/* icon glyphs -> render with the 'feather' icon font (fallback keeps latin/digits in Poppins) */
+.ico {
+    font-family: feather, Poppins;
+}
+
