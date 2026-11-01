@@ -33,6 +33,7 @@ font-family = "FiraMono Nerd Font"
 font-family = "DejaVu Sans Mono"
 font-family = "Consolas"
 font-family = "monospace"
+font-size = 8
 
 shell-integration-features = "ssh-terminfo,ssh-env,no-cursor"
 
